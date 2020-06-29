@@ -7,7 +7,7 @@ fi
 
 :> /etc/machine-id
 rm -f /etc/ssh/*key*
-:> root/.bash_history
+:> /root/.bash_history
 
 sed -i '/^UUID=*/d' /etc/sysconfig/network-scripts/ifcfg-e*
 
