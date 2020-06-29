@@ -8,7 +8,7 @@ fi
 :> /etc/machine-id
 rm -f /etc/ssh/*key*
 
-rm -f ~root/.bash_history
+rm -f /root/.bash_history
 unset HISTFILE
 
 sed -i '/^UUID=*/d' /etc/sysconfig/network-scripts/ifcfg-eth0
