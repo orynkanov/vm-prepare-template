@@ -9,7 +9,7 @@ fi
 rm -f /etc/ssh/*key*
 :> /root/.bash_history
 
-sed -i '/^UUID=*/d' /etc/sysconfig/network-scripts/ifcfg-e*
+sed -i '/^UUID=*/d' /etc/sysconfig/network-scripts/ifcfg-eth0
 
 OSVER=$(grep -o '[0-9]' /etc/centos-release | head -n1)
 
