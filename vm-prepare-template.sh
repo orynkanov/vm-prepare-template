@@ -6,11 +6,11 @@ if [[ ! -f /etc/centos-release ]]; then
 fi
 OSVER=$(grep -o '[0-9]' /etc/centos-release | head -n1)
 if [[ $OSVER -eq 7 ]]; then
-    yum update -y all && echo -e 'update all - OK\n'
+    yum update -y && echo -e 'update - OK\n'
     yum install -y epel-release && echo -e 'install epel - OK\n'
     yum install -y bash-completion mc htop wget screen qemu-guest-agent tuned && echo -e 'install pkgs - OK\n'
 elif [[ $OSVER -eq 8 ]]; then
-    dnf upgrade -y all && echo -e 'update all - OK\n'
+    dnf upgrade -y && echo -e 'update - OK\n'
     dnf install -y epel-release && echo -e 'install epel - OK\n'
     dnf install -y bash-completion mc htop wget screen qemu-guest-agent tuned && echo -e 'install pkgs - OK\n'
 fi
