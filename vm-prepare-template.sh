@@ -27,9 +27,7 @@ sed -i '/^UUID=*/d' /etc/sysconfig/network-scripts/ifcfg-eth0
 if [[ $OSVER -eq 7 ]]; then
     history -c
     yum clean all
-    sys-unconfig
 elif [[ $OSVER -eq 8 ]]; then
     history -c
     dnf clean all
-    poweroff
 fi
