@@ -10,7 +10,7 @@ if [[ $OSVER -eq 7 ]]; then
     yum install -y epel-release
     yum install -y bash-completion mc htop wget screen qemu-guest-agent tuned
 elif [[ $OSVER -eq 8 ]]; then
-    dnf update -y all
+    dnf upgrade -y all
     dnf install -y epel-release
     dnf install -y bash-completion mc htop wget screen qemu-guest-agent tuned
 fi
