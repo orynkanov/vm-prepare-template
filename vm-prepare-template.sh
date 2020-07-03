@@ -6,13 +6,13 @@ if [[ ! -f /etc/centos-release ]]; then
 fi
 OSVER=$(grep -o '[0-9]' /etc/centos-release | head -n1)
 if [[ $OSVER -eq 7 ]]; then
-    yum update -y all && echo 'update all - OK'
-    yum install -y epel-release && echo 'install epel - OK'
-    yum install -y bash-completion mc htop wget screen qemu-guest-agent tuned && echo 'install pkgs - OK'
+    yum update -y all && echo -e 'update all - OK\n'
+    yum install -y epel-release && echo -e 'install epel - OK\n'
+    yum install -y bash-completion mc htop wget screen qemu-guest-agent tuned && echo -e 'install pkgs - OK\n'
 elif [[ $OSVER -eq 8 ]]; then
-    dnf upgrade -y all && echo 'update all - OK'
-    dnf install -y epel-release && echo 'install epel - OK'
-    dnf install -y bash-completion mc htop wget screen qemu-guest-agent tuned && echo 'install pkgs - OK'
+    dnf upgrade -y all && echo -e 'update all - OK\n'
+    dnf install -y epel-release && echo -e 'install epel - OK\n'
+    dnf install -y bash-completion mc htop wget screen qemu-guest-agent tuned && echo -e 'install pkgs - OK\n'
 fi
 
 systemctl enable tuned --now
